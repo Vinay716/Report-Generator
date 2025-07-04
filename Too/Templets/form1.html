@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Form1.css' %}">
+   
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <img src="/static/Images/NCR image.svg" alt="Logo" class="nav-icon">
+            </li>
+            <li class="nav-item nav-heading">
+                <h1 class="nav-title">Tester And Scope Details</h1>
+            </li>
+        </ul>
+    </nav>
+    <form method="post">
+        {% csrf_token %}
+        <div class="container">
+            <!-- <h1>Tester And Scope Details</h1> -->
+            <!-- First Input Box Section -->
+            <div class="section">
+                
+            
+                <h2>Scope</h2>                                       
+                <div class="task-row" id ='task-row'>
+                    <input type="text"  id="task-input" class="autocomplete-input" placeholder="List of in-scope items" />
+                    <button type = "button" class="add-btn" id="add-btn">Add</button>
+                </div>
+                <!-- Hidden input to store the list HTML -->
+                <input type="hidden" name="list_html1" id="list-html-hidden1">
+
+                <div class="todo-box" id="todo-box-one">
+                    <ul id="task-list">
+                        {% if list_html1 %}
+                            {{ list_html1|safe }}
+                        {% endif %}
+                    </ul>
+                </div>            
+            </div>
+
+            <!-- Second Input Box Section (Three Columns) -->
+            <div class="section">
+                <h2>Testing Accounts Provided</h2>
+                <div class="task-row" id="task-row">
+                    <input type="text"  id="task-input1" placeholder="User Type"/>
+                    <input type="text"  id="task-input2" placeholder="User Id"/>
+                    <span class="checkbox-container" id="sso-span">SSO</span>
+                    <!-- <input type="checkbox" id="task-input3" placeholder="Password/SSO"/> -->
+                    <button type="button" class="add-btn" id="add-btn-three">Add</button>
+                </div>
+
+                <!-- Hidden input to store the list HTML -->
+                <input type="hidden" name="list_html2" id="list-html-hidden2">
+
+                <div class="todo-box" id="todo-box-two">
+                    <ul id="task-list2">
+                        {% if list_html2 %}
+                            {{ list_html2|safe }}
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Third  Box Section (Two Columns) -->
+            <div class="section">
+                <h2>Assessment Team</h2>
+                <div class="task-row">
+                    <input type="text" id="task-input4" placeholder="Name"/>
+                    <input type="text" id="task-input5" placeholder="Role"/>
+                    <button class="add-btn" type="button" id="add-btn-two">Add</button>
+                </div>
+
+                <!-- Hidden input to store the list HTML -->
+                <input type="hidden" name="list_html3" id="list-html-hidden3">
+
+                <div class="todo-box" id="todo-box-three">
+                    <ul id="task-list3">
+                        {% if list_html3 %}
+                            {{ list_html3|safe }}
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Other sections ... -->
+            <!-- <button type="submit" name = 'back'id="prev-btn-2">Previous</button> -->
+            <button type="submit" name = 'next'id="prev-btn-2">Next</button>
+            <!-- <button type="submit" name = 'next'id="next-btn-2">Next</button>   <- -->
+        </div>
+    </form>
+
+    <script src="{% static 'Form1.js' %}"></script>
+   
+</body>
+</html>

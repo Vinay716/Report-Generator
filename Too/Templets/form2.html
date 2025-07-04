@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Form2.css' %}">
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.0.0/classic/ckeditor.js"></script>
+    
+    </head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <img src="/static/Images/NCR image.svg" alt="Logo" class="nav-icon">
+            </li>
+            <li class="nav-item nav-heading">
+                <h1 class="nav-title">Vulnerability Details</h1>
+            </li>
+            
+        </ul>
+    </nav>
+    <form method="post" autocomplete="off">
+        {% csrf_token %}
+        <div class="container">
+            <div class="section">
+                <!-- <h2>Vulnerability Details</h2> -->
+                <div class="row">
+                    <span class="col">
+                        <textarea oninput="auto_grow(this)" class="form-control" id="task-input6" placeholder="Vulnerability"></textarea> 
+                    </span>
+                    <span class="col">
+                        <textarea oninput="auto_grow(this)"  class="form-control" id="task-input7" placeholder="Risk Rating"></textarea>
+                    </span>
+                    <span class="col">
+                        <textarea  oninput="auto_grow(this)"  class="form-control" id="task-input8" placeholder="Application/System Impacted"></textarea>
+                    </span>
+                    <span class="col-auto">
+                        <button type="button" class="btn btn-success" id="add-btn-four">Add</button>
+                    </span>
+                </div>
+                    <div class= "suggestions">
+                        <ul class="list1"></ul>
+                        <ul class ='list3'></ul>
+                        <ul class="list2"></ul>
+                        <ul class = "list4"></ul>
+                    </div>
+                
+                <input type="hidden" id="field1" value="{{ form1_data.field1 }}">
+                <input type="hidden" id="field2" value="{{ form1_data.field2 }}">
+                <input type="hidden" id="field3" value="{{ form1_data.field3 }}">
+                <input type="hidden" id="html1" value="{{ list_html1 }}">
+                <input type="hidden" id="html2" value="{{ list_html2 }}">
+                <input type="hidden" id="html3" value="{{ list_html3 }}">
+                
+                <div class="todo-box">
+                    <ul class="list-group" id="task-list4">
+                        {% if list_html4 %}
+                            {{ list_html4|safe }}
+                        {% endif %}
+                    </ul>
+                </div>
+                
+                
+            </div>
+            <div id="loading" class="loading-spinner" style="display: none;"></div>
+            <div id="ending">
+                <button type="button"  name="next" id="prev-btn-2">Submit</button>
+                <span id="file"></span>
+            </div>
+            
+        </div>
+        
+        <script  type="module" src="{% static 'Form2.js' %}"></script>
+        <script src="{% static 'autoform2.js' %}"></script>
+        <script type="text/javascript" src="{% static 'summary.js' %}"></script>
+        
+        <script>
+        const auto_grow = (element) => {
+            element.style.height = "5px"; // Reset to a small height to recalculate correctly
+            element.style.height = (element.scrollHeight - 9) + "px"; // Set to the scroll height
+        };
+        </script>
+
+        
+      
+    </form>
+</body>
+</html>

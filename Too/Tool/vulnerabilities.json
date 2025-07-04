@@ -1,0 +1,233 @@
+[
+    {
+        "name": "SQL Injection",
+        "risk": "High",
+        "description": "A code injection technique that exploits a security vulnerability in an application's software.",
+        "impact": "Unauthorized access to the database data leakage data modification and in some cases complete takeover of the system.",
+        "recommendations": "Use prepared statements and parameterized queries Validate and sanitize all user inputs Use ORM frameworks that handle SQL injection protection."
+    },
+    {
+        "name": "Cross-Site Scripting (XSS)",
+        "risk": "High",
+        "description": "A vulnerability that allows attackers to inject malicious scripts into content from otherwise trusted websites.",
+        "impact": "Hijacking user sessions defacing websites and redirecting users to malicious sites.",
+        "recommendations": "Sanitize and validate all user inputs Use Content Security Policy (CSP) Encode data before rendering it in the browser."
+    },
+    {
+        "name": "Cross-Site Request Forgery (CSRF)",
+        "risk": "Medium",
+        "description": "A type of malicious exploit of a website where unauthorized commands are transmitted from a user that the web application trusts.",
+        "impact": "Performing unwanted actions on behalf of authenticated users such as changing account details or initiating transactions.",
+        "recommendations": "Use anti-CSRF tokens Ensure that GET requests are idempotent Verify the origin of requests."
+    },
+    {
+        "name": "Insecure Deserialization",
+        "risk": "High",
+        "description": "A vulnerability that occurs when untrusted data is used to abuse the logic of an application inflict a DoS attack or even execute arbitrary code.",
+        "impact": "Remote code execution privilege escalation and application logic manipulation.",
+        "recommendations": "Implement integrity checks or digital signatures on serialized objects Use a serialization format that enforces strict schema."
+    },
+    {
+        "name": "Security Misconfiguration",
+        "risk": "Medium",
+        "description": "Improper configuration of security settings in applications frameworks servers or databases.",
+        "impact": "Unauthorized access data leakage and compromised systems.",
+        "recommendations": "Regularly review and update configurations Implement a secure baseline configuration Automate configuration management processes."
+    },
+    {
+        "name": "Broken Authentication",
+        "risk": "High",
+        "description": "Weaknesses in authentication mechanisms that allow attackers to compromise user identities.",
+        "impact": "Account takeover unauthorized access and data theft.",
+        "recommendations": "Implement multi-factor authentication Ensure strong password policies and storage Monitor for and respond to authentication anomalies."
+    },
+    {
+        "name": "Sensitive Data Exposure",
+        "risk": "High",
+        "description": "Inadequate protection of sensitive data such as financial information or personal data.",
+        "impact": "Data breaches identity theft and regulatory fines.",
+        "recommendations": "Encrypt sensitive data at rest and in transit Implement strong access controls Regularly audit data storage and handling practices."
+    },
+    {
+        "name": "Using Components with Known Vulnerabilities",
+        "risk": "Medium",
+        "description": "Incorporating libraries frameworks or other software modules with known vulnerabilities into applications.",
+        "impact": "Exploitation of known vulnerabilities leading to various attacks.",
+        "recommendations": "Regularly update and patch components Use automated tools to identify and manage vulnerabilities Monitor for announcements of new vulnerabilities."
+    },
+    {
+        "name": "Insufficient Logging and Monitoring",
+        "risk": "Low",
+        "description": "Lack of proper logging and monitoring to detect and respond to security incidents.",
+        "impact": "Delayed detection of attacks prolonged breaches and inability to perform forensic analysis.",
+        "recommendations": "Implement comprehensive logging of security-relevant events Regularly review and analyze logs Establish an incident response plan and conduct drills."
+    },
+    {
+        "name": "Unvalidated Redirects and Forwards",
+        "risk": "Medium",
+        "description": "Failure to validate the URL or destination that the user is redirected or forwarded to.",
+        "impact": "Phishing attacks and redirection to malicious sites.",
+        "recommendations": "Avoid using redirects and forwards If necessary validate the destination URLs Use whitelisting of allowed destinations."
+    },
+    {
+        "name": "Buffer Overflow",
+        "risk": "High",
+        "description": "Occurs when a program writes more data to a buffer than it can hold.",
+        "impact": "Crash the system corrupt data and execute arbitrary code.",
+        "recommendations": "Use languages with built-in bounds checking Implement stack canaries and ASLR (Address Space Layout Randomization) Regularly update and patch software."
+    },
+    {
+        "name": "Privilege Escalation",
+        "risk": "High",
+        "description": "Exploiting a flaw to gain elevated access to resources.",
+        "impact": "Full control of the system by unauthorized users.",
+        "recommendations": "Implement the principle of least privilege Regularly update and patch systems Monitor for unusual account activities."
+    },
+    {
+        "name": "Denial of Service (DoS)",
+        "risk": "High",
+        "description": "Attack aimed at making a service unavailable.",
+        "impact": "Service outages and loss of productivity.",
+        "recommendations": "Implement rate limiting and traffic filtering Use DDoS protection services Monitor network traffic for anomalies."
+    },
+    {
+        "name": "Man-in-the-Middle (MitM) Attack",
+        "risk": "High",
+        "description": "Eavesdropping attack where communication between two parties is intercepted.",
+        "impact": "Data interception and manipulation.",
+        "recommendations": "Use strong encryption protocols (e.g. TLS) Implement mutual authentication Regularly update and patch software."
+    },
+    {
+        "name": "Phishing",
+        "risk": "High",
+        "description": "Deceptive attempt to obtain sensitive information by pretending to be a trustworthy entity.",
+        "impact": "Identity theft and financial loss.",
+        "recommendations": "Implement email filtering solutions Conduct regular security awareness training Enable multi-factor authentication."
+    },
+    {
+        "name": "Malware",
+        "risk": "High",
+        "description": "Malicious software designed to harm or exploit any programmable device or network.",
+        "impact": "System damage data theft and loss of functionality.",
+        "recommendations": "Use up-to-date antivirus software Regularly patch and update all systems Educate users about safe online practices."
+    },
+    {
+        "name": "Ransomware",
+        "risk": "High",
+        "description": "Type of malware that encrypts the victim's files and demands a ransom.",
+        "impact": "Data loss and financial extortion.",
+        "recommendations": "Regularly back up data Use robust antivirus and antimalware solutions Educate users on recognizing phishing attempts."
+    },
+    {
+        "name": "Zero-Day Vulnerability",
+        "risk": "High",
+        "description": "A previously unknown vulnerability that is exploited before a fix is available.",
+        "impact": "Severe system compromise and data breaches.",
+        "recommendations": "Implement intrusion detection and prevention systems (IDPS) Apply security patches and updates promptly Conduct regular security assessments."
+    },
+    {
+        "name": "Session Hijacking",
+        "risk": "Medium",
+        "description": "Exploiting a valid computer session to gain unauthorized access.",
+        "impact": "Unauthorized access to user accounts and sensitive data.",
+        "recommendations": "Use secure session management practices Implement session timeouts and re-authentication Use HTTPS to protect session cookies."
+    },
+    {
+        "name": "Clickjacking",
+        "risk": "Medium",
+        "description": "Malicious technique of tricking a user into clicking on something different from what the user perceives.",
+        "impact": "Unintended actions such as changing settings or initiating transactions.",
+        "recommendations": "Use X-Frame-Options header Implement frame busting techniques Educate users on the risks of clickjacking."
+    },
+    {
+        "name": "LDAP Injection",
+        "risk": "Medium",
+        "description": "Exploiting input validation vulnerabilities in LDAP queries.",
+        "impact": "Unauthorized access to directory data and possible data manipulation.",
+        "recommendations": "Sanitize and validate all user inputs Use parameterized LDAP queries Implement least privilege access to directory services."
+    },
+    {
+        "name": "XML External Entity (XXE) Injection",
+        "risk": "High",
+        "description": "Exploiting vulnerable XML processors by including external entities.",
+        "impact": "Data exfiltration DoS attacks and remote code execution.",
+        "recommendations": "Disable XML external entity processing Use libraries that protect against XXE Sanitize and validate all XML inputs."
+    },
+    {
+        "name": "Directory Traversal",
+        "risk": "Medium",
+        "description": "Exploiting insufficient security validation or sanitization of user-supplied input file names.",
+        "impact": "Access to arbitrary files on the server.",
+        "recommendations": "Validate and sanitize all user inputs Implement access controls to restrict file access Use secure coding practices."
+    },
+    {
+        "name": "Command Injection",
+        "risk": "High",
+        "description": "Executing arbitrary commands on the host operating system via a vulnerable application.",
+        "impact": "Complete system compromise and data theft.",
+        "recommendations": "Validate and sanitize all user inputs Use safe APIs that avoid command execution Use least privilege for application processes."
+    },
+    {
+        "name": "Open Redirect",
+        "risk": "Low",
+        "description": "An application that accepts a user-controlled input that specifies a link to an external site, allowing attackers to redirect victims to malicious sites.",
+        "impact": "Phishing attacks and redirection to harmful websites.",
+        "recommendations": "Avoid using open redirects wherever possible Implement strict validation of redirect URLs Educate users about the risks of phishing."
+    },
+    {
+        "name": "Session Fixation",
+        "risk": "Medium",
+        "description": "An attack that permits an attacker to hijack a valid user session.",
+        "impact": "Unauthorized access to user accounts and sensitive data.",
+        "recommendations": "Generate new session IDs after successful login Use secure mechanisms for session management Monitor session activity for anomalies."
+    },
+    {
+        "name": "HTTP Header Injection",
+        "risk": "Medium",
+        "description": "Injection of unexpected HTTP headers into responses.",
+        "impact": "Cache poisoning and cross-site scripting attacks.",
+        "recommendations": "Validate and sanitize all user inputs, Encode and escape user-supplied content, Use security libraries and frameworks."
+    },
+    {
+        "name": "Session Token Disclosure",
+        "risk": "Medium",
+        "description": "Disclosure of session tokens or session identifiers.",
+        "impact": "Unauthorized access to user accounts and sensitive data.",
+        "recommendations": "Encrypt session tokens in transit and at rest, Use secure mechanisms for token storage and transmission, Implement session token expiration and regeneration."
+    },
+    {
+        "name": "HTML Injection",
+        "risk": "Medium",
+        "description": "Injection of untrusted HTML content into a web page.",
+        "impact": "Cross-site scripting (XSS) and defacement attacks.",
+        "recommendations": "Escape and sanitize user inputs before rendering, Use Content Security Policy (CSP) to restrict sources of executable scripts and styles."
+    },
+    {
+        "name": "Insufficient Transport Layer Protection",
+        "risk": "Medium",
+        "description": "Lack of adequate encryption and integrity protection for data transmitted over networks.",
+        "impact": "Man-in-the-middle (MitM) attacks and data interception.",
+        "recommendations": "Use TLS/SSL for all communications, Disable insecure protocols and cipher suites, Regularly update SSL certificates."
+    },
+    {
+        "name": "Insecure Cryptographic Storage",
+        "risk": "High",
+        "description": "Weak or improperly implemented cryptographic algorithms for storing sensitive data.",
+        "impact": "Data breaches and exposure of sensitive information.",
+        "recommendations": "Use strong encryption algorithms and key management practices, Encrypt sensitive data at rest and in transit, Regularly audit cryptographic configurations."
+    },
+    {
+        "name": "Session Timeout",
+        "risk": "Low",
+        "description": "Inadequate session timeout settings that allow sessions to remain active for extended periods.",
+        "impact": "Session hijacking and unauthorized access to active user sessions.",
+        "recommendations": "Implement appropriate session timeout periods based on application usage patterns, Notify users before session expiration, Implement re-authentication for sensitive operations."
+    },
+    {
+        "name": "Content Spoofing",
+        "risk": "Medium",
+        "description": "Misleading users by presenting incorrect information.",
+        "impact": "Phishing attacks and deception of users.",
+        "recommendations": "Validate and sanitize all user inputs, Implement strict content validation and encoding, Educate users about content authenticity."
+    }
+]

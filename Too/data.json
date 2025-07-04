@@ -1,0 +1,59 @@
+{
+    "heading": "Penetration Test Report",
+    "name": "asdgad",
+    "address": "zxcv",
+    "date": "September 12, 2024",
+    "Intro": "\n    <w:r xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"\n         xmlns:v=\"urn:schemas-microsoft-com:vml\"\n         xmlns:o=\"urn:schemas-microsoft-com:office:office\">\n      <w:pict>\n        <v:shape id=\"_x0000_s1025\" type=\"#_x0000_t202\" style=\"position:absolute;margin-left:0;margin-top:0;width:500pt;height:400pt;z-index:251659264;visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:9pt;mso-wrap-distance-top:9pt;mso-wrap-distance-right:9pt;mso-wrap-distance-bottom:9pt;mso-position-horizontal:absolute;mso-position-vertical:absolute\">\n          <v:fill on=\"false\"/>\n          <v:stroke opacity=\"0\"/>\n          <v:textbox inset=\"2.88pt,2.88pt,2.88pt,2.88pt\">\n            <w:txbxContent>\n              <w:p>\n                <w:r>\n                  <w:rPr>\n                    <w:sz w:val=\"88\"/> <!-- 44pt -->\n                    <w:rFonts w:ascii=\"Jost\" w:hAnsi=\"Jost\" w:cs=\"Jost\"/>\n                  </w:rPr>\n                  <w:t>Penetration Test Report</w:t>\n                </w:r>\n              </w:p>\n              <!-- Adding four empty paragraphs for spacing -->\n              <w:p><w:r><w:t></w:t></w:r></w:p>\n              <w:p><w:r><w:t></w:t></w:r></w:p>\n              <w:p><w:r><w:t></w:t></w:r></w:p>\n              <w:p><w:r><w:t></w:t></w:r></w:p>\n              <w:p>\n                <w:r>\n                  <w:rPr>\n                    <w:sz w:val=\"28\"/> <!-- 14pt -->\n                    <w:rFonts w:ascii=\"Jost\" w:hAnsi=\"Jost\" w:cs=\"Jost\"/>\n                  </w:rPr>\n                  <w:t>Prepared By: asdgad</w:t>\n                </w:r>\n              </w:p>\n              <w:p>\n                <w:r>\n                  <w:rPr>\n                    <w:sz w:val=\"28\"/> <!-- 14pt -->\n                    <w:rFonts w:ascii=\"Jost\" w:hAnsi=\"Jost\" w:cs=\"Jost\"/>\n                  </w:rPr>\n                  <w:t>Prepared For: zxcv</w:t>\n                </w:r>\n              </w:p>\n              <w:p>\n                <w:r>\n                  <w:rPr>\n                    <w:sz w:val=\"28\"/> <!-- 14pt -->\n                    <w:rFonts w:ascii=\"Jost\" w:hAnsi=\"Jost\" w:cs=\"Jost\"/>\n                  </w:rPr>\n                  <w:t>Prepared On: September 12, 2024</w:t>\n                </w:r>\n              </w:p>\n            </w:txbxContent>\n          </v:textbox>\n        </v:shape>\n      </w:pict>\n    </w:r>\n    ",
+    "first_table": {
+        "rows": []
+    },
+    "second_table": {
+        "rows": [
+            [
+                "asdf",
+                "zdf",
+                ""
+            ]
+        ]
+    },
+    "third_table": {
+        "rows": [
+            [
+                "asdf",
+                "asdf"
+            ],
+            [
+                "vigi",
+                "yoyo"
+            ]
+        ]
+    },
+    "Vanriability_table": {
+        "fifth_table": {
+            "row_2_data": [
+                [
+                    "1",
+                    "Session Token Disclosure",
+                    "Medium",
+                    "gg"
+                ]
+            ],
+            "row_3_data": [
+                [
+                    [
+                        "<p>Disclosure of session tokens or session identifiers.</p>"
+                    ],
+                    [
+                        "  "
+                    ],
+                    [
+                        "<p>Unauthorized access to user accounts and sensitive data.</p>"
+                    ],
+                    [
+                        "<p>Encrypt session tokens in transit and at rest, Use secure mechanisms for token storage and transmission, Implement session token expiration and regeneration.</p>"
+                    ]
+                ]
+            ]
+        }
+    }
+}

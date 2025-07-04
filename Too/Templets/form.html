@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'form.css' %}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <img src="/static/Images/NCR image.svg" alt="Logo" class="nav-icon">
+            </li>
+            <li class="nav-item nav-heading">
+                <h1 class="nav-title">Appsec Repor Generatoion</h1>
+            </li>
+        </ul>
+    </nav>
+    <form method="post" id="myForm">
+        {% csrf_token %}
+        <!-- container -->
+        <div class="container">                     
+            <!-- heading -->
+            <!-- <h1>Appsec Repor Generatoion</h1> -->
+    
+                <div class="form-group1">
+                    <label for="name">Tester Name</label>
+                    <input type="text" id="name" name="tester_name" required value="{{ form1_data.field1 }}">
+                </div>
+                <div class="form-group2">
+                    <label for="app-name">App Name</label>
+                    <input type="text" id="app-name" name="app_name" required value="{{ form1_data.field2 }}">
+                </div>
+                <div class="form-group3">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date" required value="{{ form1_data.field3 }}" >
+                </div>
+                <button type="submit" id="next-btn-1" name="next">Next</button>
+        </div>
+        </form>
+    
+
+    <!-- <script src="{% static 'form.js' %}"></script> -->
+   
+</body>
+</html>

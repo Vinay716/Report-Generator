@@ -1,0 +1,515 @@
+body {
+  font-family: "Jost", sans-serif;margin: 0;
+  padding: 0;
+  background-color: #f7f2fd; /* Light grey background color */
+}
+/* Navbar styles */
+.navbar {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  height: 60px; /* Adjust this value to your desired navbar height */
+  background-color: #f8f9fa; /* Adjust this value to match your design */
+  position: relative;
+}
+
+/* Center the nav items horizontally */
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Icon stays on the far left */
+.nav-icon {
+  width: 200px;
+  height: 50px;
+  padding-left: 20px; /* Adjust padding as needed */
+}
+
+/* Center the title in the navbar */
+.nav-heading {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.nav-title {
+  margin: 0;
+  font-size: 24px; /* Adjust font size as needed */
+  font-weight: bold;
+}
+
+/* Optional: Ensure the icon doesn't overlap the title */
+.nav-item:first-child {
+  flex-shrink: 0; /* Prevent the icon from shrinking */
+}
+
+/* this is the container which have everything */
+.container {
+  max-width: 81%;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* this is for the name and the input boxes */
+.section {                           
+  margin-bottom: 20px;
+  padding-bottom: 40px;
+  border-bottom: 2px solid #ddd;
+  
+}
+
+/* heading of the form Forth section */
+.section h2 {
+  margin-bottom: 40px;
+  color: #09050e;
+  text-align: center;
+  font-size: 1.8em;
+}
+.row{
+  display:flex;    
+}
+
+.suggestions {
+  display: flex;
+  justify-content: space-between;
+}
+.list1{
+  list-style-type: none;
+  border: 0px solid #a681c5;  
+  margin: 0;
+  width: 92%; 
+  margin-right: 2%;
+  padding: 0;
+}
+.list3{
+  list-style-type: none;
+  border: 0px solid #a681c5;  
+  margin: 0;
+  width: 93%; 
+  margin-right: 1.5%;
+  padding: 0;
+}
+.list2{
+  list-style-type: none;
+  border: 0px solid #a681c5;  
+  margin: 0;
+  width: 93%; 
+  margin-right: 2%;
+  padding: 0;
+}
+.list4{
+  list-style-type: none;
+  border: 0px solid #ffffff;  
+  margin: 0;
+  min-width:55px; 
+  padding: 0;
+
+}
+.col{
+  margin-right:40px;
+  width: 40%; 
+}
+
+.col textarea{
+  border: 2px solid #a681c5;  
+  outline: #ffffff;
+  padding: 15px;   
+  font-size: 16px;
+  display: flex;
+  border-radius: 0cap;
+  font-family: "Jost", sans-serif;
+  /* min-height: px; */
+  resize: none;
+    /* transition: all 01s ease; */
+  width: 97%;
+}
+  
+.col textarea:focus {
+  outline:  #ffffff;
+  border: 2px solid  #7d29c2;  
+
+}
+#prev-btn-2{
+    background-color: #7b55c1; /* Initial blue background color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 12px;
+    padding: 10px 20px; /* Padding around the text */
+    margin-top: 25px;
+    font-size: 16px; /* Font size */
+    font-family: "Jost", sans-serif;
+    cursor: pointer; /* Pointer cursor on hover */
+    outline: none; /* Remove default outline */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+.col-auto{
+display:flex;
+align-items: center; /* to put the buttone hight same */
+background-color: #ffffff; /* Initial blue background color */
+outline: none; /* Remove default outline */
+}
+
+#add-btn-four{
+display:flex;
+justify-content: center;
+align-items: center;
+margin-left: auto;
+background-color: #7b55c1; /* Initial blue background color */
+color: white; /* Text color */
+border: none; /* Remove default border */
+border-radius: 5px;
+height: 40px;
+text-align: center;
+font-size: 16px; /* Font size */
+font-family: "Jost", sans-serif;
+cursor: pointer; /* Pointer cursor on hover */
+outline: none; /* Remove default outline */
+transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+#add-btn-four:hover {
+  background-color: #6f42c1; /* Purple background color on hover */
+}
+ul {                                                                                    /* ul list */
+  z-index: 1000; /* Ensures the list appears above other elements */
+  background: white; /* Set a background to cover any underlying elements */
+  border: 0px solid #ccc; /* Optional: add a border for visibility */
+  list-style-type: none; /* Remove default list styling */
+  padding: 10px; /* Optional: padding for aesthetics */
+  margin: 0; /* Reset margin */
+  overflow-y: auto; /* Optional: allow scrolling if there are too many items */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); Optional: add shadow for depth */
+}
+
+.todo-item-row {
+  margin-bottom: 100px;
+  border: 0px solid #085ece;
+  position: relative;
+  overflow:scroll; /* Enable scrolling if content overflows */
+  list-style-type: none;
+  display: block; /* Ensure each list item is a block element */
+  margin-bottom: 10px; /* Optional: Add margin between each list item */
+  box-sizing: border-box; /* Include padding and border in width/height calculation */
+  overflow:visible;
+  width: 100%;
+  min-height: auto;
+}
+
+
+.list {
+  background-color:#ffffff;
+  border-radius: 0 0 5px 5px;
+}
+.list-items {
+padding: 10px 5px;
+}
+.list-items:hover {
+background-color:#dddddd;
+}
+
+
+.btn {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+
+.btn-danger {
+  background-color: red;
+  color: white;
+  border: none;
+}
+
+.ml-2 {
+  margin-left: 8px;
+}
+
+
+/* Dynamic setion STARTS */
+
+.todo-item-column{
+  font-size: 1em;
+  word-wrap: break-word; /* Wrap long words */
+  /* padding: 10px; */
+  border: 0px solid #ccc; /* Border around each data element */
+  border-radius: 0px;
+  border-bottom: 1px solid #1d1b1b;
+  vertical-align: top;
+  margin: 5px;
+  flex: 1; /* Take full available space */
+  display: inline-block;
+  padding: 1px;
+
+}
+
+.todo-item-column:last-child {
+border-right: none;
+}
+
+
+#task-list4{
+  display: block;
+  
+}
+.main-div {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color:#a08ab518;
+  border:0px solid #198558;
+  max-width: 100%;
+  max-height: none;
+  overflow:visible;
+  min-height:auto;
+}
+
+.one-div {
+  display: flex;
+  justify-content: space-between; /* Space out the columns */
+  margin-bottom: 4px;
+  background-color: #f9f9f9;
+  border: 0px solid #198553;
+  
+}
+
+.two-div {
+  background-color: #f9f9f9;
+  border: 0px solid #193685;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-item-column {
+margin-right: 10px;
+}
+
+.individual-section {
+margin-bottom: 15px;
+padding: 15px;
+border: 1px solid #7d29c2;
+border-radius: 0px;
+background-color: #ffffff;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+position: relative;
+}
+
+.toggle-button {
+position: absolute;
+top: 2px;
+right: 10px;
+border: 0px solid #000;
+background-color: #ffffff;
+background-size: contain; /* Scale the image to fit */
+background-repeat: no-repeat;
+background-position: center; /* Center the image */
+/* background-image: url('open.png'); */
+color: #ffffff;
+/* font-size: 27px; */
+width: 28px;
+height: 28px;
+cursor: pointer;
+z-index: 0; /* Ensure it stays above other elements */
+}
+
+.content-container {
+display: flex;
+flex-direction: column;
+gap: 10px;
+overflow: visible;
+max-height: none;
+}
+.custom-editor {
+    border: 2px solid #007BFF;  /* Custom border color and width */
+    border-radius: 8px;          /* Rounded corners */
+    padding: 10px;               /* Padding inside the editor */
+    background-color: #f9f9f9;   /* Optional: Light background color */
+}
+
+/* Optional: Style the editor's content area specifically */
+.custom-editor p {
+  width: 97%;
+    margin: 10;
+    line-height: 1.5;
+}
+.names_of_textarea{
+  margin-left: 5px;  /* Add margin to the left side */
+  margin-bottom: 10px; /* Add margin to the bottom */
+}
+
+.editor-instance{
+  border-radius: 8px;          /* Rounded corners */
+  margin-bottom: 30px;
+  width: 97%;
+}
+
+textarea {
+font-family: "Jost", sans-serif;padding: 10px;
+border: 1px solid #a681c5;  
+outline: #ffffff;
+border-radius: 0px;
+width: 94%;
+padding: 10px;
+overflow: hidden; /* Hide the scroll bar */
+resize:none /* Prevent manual resizing by the user */
+}
+
+textarea:focus {
+  outline:  #ffffff;
+  border: 2px solid  #7d29c2;  
+
+}
+
+.ck-content ul {
+    list-style-type: disc; /* This will ensure bullet points are shown */
+    padding-left: 40px;    /* Adjust this value for proper indentation */
+}
+
+
+.ck-content ol {
+  list-style-type: decimal; /* For numbered lists */
+  padding-left: 40px;        /* Adjust this value for proper indentation */
+}
+
+input {
+padding: 10px;
+/* align-items: center; */
+border: 1px solid #a681c5;  
+margin-bottom: 30px;
+outline: #ffffff;
+border-radius: 0px;
+width: 97%;
+}
+
+.Pictures{
+  font-family: "Jost", sans-serif;
+  font-size: 16px; /* Change the font size */
+  /* text-align: center;  */
+  display: block;
+}
+
+.image-input-container {
+display: flex;
+flex-direction: column;
+gap: 25px;
+border-top: 0px dashed #000;
+padding-top: 10px;
+width: 100%;
+min-height: auto;
+}
+
+.add-image-button {
+padding: 10px;
+border: 0px solid #000;
+border-radius: 0px;
+font-family: "Jost", sans-serif;
+background-color: #734db9;
+color: #fff;
+transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+cursor: pointer;
+}
+
+.add-image-button:hover {
+  background-color: #602fbb; /* Purple background color on hover */
+}
+
+.image-section {
+display: flex;
+flex-direction: column;
+gap: 10px;
+position: relative;
+}
+
+.delete-image-button {
+  position: absolute;
+  top: 0;
+  background-image: url('/static/Images/Icon.png');
+  background-size: contain; /* Scale the image to fit */
+  background-repeat: no-repeat;
+  background-position: center; /* Center the image */
+  border: 0px solid #000;
+  top:2px;
+  right: -6px;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #ff0000;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+}
+
+#ending {
+  display: flex;  /* Use Flexbox */
+  justify-content: space-between;  /* Space out the button and file link */
+  align-items: center;  /* Center items vertically */
+  width: 100%;  /* Ensure it takes up the full width */
+  margin-top: 0px;  /* Optional: Adds some space above the container */
+}
+
+#prev-btn-2{
+background-color: #7b55c1; /* Initial blue background color */
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Padding around the text */
+  margin-top: 25px;
+  font-size: 16px; /* Font size */
+  font-family: "Jost", sans-serif;
+  cursor: pointer; /* Pointer cursor on hover */
+  outline: none; /* Remove default outline */
+  transition: background-color 0.1s, box-shadow 0.3s; /* Smooth transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+#prev-btn-2:hover {
+  background-color: #6f42c1; /* Purple background color on hover */
+}
+
+
+.loading-spinner {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #6f42c1; /* Blue */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#file {
+  display: inline-block;  /* Inline-block allows width to be set while still behaving like inline */
+  width: 100%;  /* Take up the full width of the container */
+  text-align: right;  /* Align content to the right */
+  margin-top: 20px;  /* Optional: Adds some space above the link */
+}
+
+/* Style for the link inside the file span */
+#file a {
+  color: #6f42c1;  /* Link color */
+  text-decoration: none;  /* Remove underline */
+  font-weight: bold;  /* Make the link bold */
+  padding: 10px;  /* Add some padding */
+  border: 1px solid #aaaeb3;  /* Add a border */
+  font-family: "Jost", sans-serif;/* border-radius: 5px;  Round the corners */
+  background-color: #f8f9fa;  /* Light background color */
+}
+
+#file a:hover {
+  background-color: #6f42c1;  /* Background color on hover */
+  color: white;  /* Text color on hover */
+}
